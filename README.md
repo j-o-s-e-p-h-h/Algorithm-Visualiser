@@ -1,6 +1,10 @@
 # Algorithm Visualiser
 
+<<<<<<< HEAD
 A program to help visualise sorting algorithms inspired by YouTube short sorting algorithm videos.
+=======
+A program to help visualise sorting algorithms inspired by youtube short sorting algorithims.
+>>>>>>> 99781cd109bb30d5c3b095b9a05b1148108fa409
 
 ## Preview
 
