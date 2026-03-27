@@ -9,6 +9,7 @@ class DrawInformation:
     WHITE = 0, 255, 0
     GREEN = 255, 0, 0
     RED = 128, 128, 128
+    BACKGROUND_COLOR = WHITE
 
     #explain later
     side_pad = 100 
@@ -33,6 +34,10 @@ class DrawInformation:
         #where to start drawing blocks
         self.start_x_coordinate = self.side_pad // 2
 
+def draw(draw_info):
+    draw_info.window.fill(draw_info.BACKGROUND_COLOR)
+    pygame.display.update()
+
 def generate_starting_list(n, min_value, max_value):
     list = []
 
@@ -55,6 +60,9 @@ def main():
     while run:
         clock.tick(120)
 
+        draw(draw_info) 
+
+    
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
