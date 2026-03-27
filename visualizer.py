@@ -38,6 +38,7 @@ class DrawInformation:
         self.max_value = max(values)
         self.min_value = min(values)
 
+        # Scale bar width and height from the current list so any reset still fits the window.
         value_range = self.max_value - self.min_value or 1
         self.block_width = max(1, round((self.width - self.side_pad) / len(values)))
         self.block_height = max(1, math.floor((self.height - self.top_pad) / value_range))
@@ -92,6 +93,7 @@ def draw_list(draw_info, color_positions=None):
 
     for index, value in enumerate(draw_info.list):
         x = draw_info.start_x_coordinate + index * draw_info.block_width
+        # Higher values need to start closer to the top so the bar grows upward from the bottom edge.
         y = draw_info.height - (value - draw_info.min_value) * draw_info.block_height
 
         color = draw_info.GRADIENTS[index % len(draw_info.GRADIENTS)]
@@ -112,6 +114,7 @@ def bubble_sort(draw_info, ascending=True):
         for j in range(len(values) - 1 - i):
             if should_swap(values[j], values[j + 1], ascending):
                 values[j], values[j + 1] = values[j + 1], values[j]
+                # Each yield returns the bars to highlight for a single animation step.
                 yield {j: draw_info.GREEN, j + 1: draw_info.RED}
             else:
                 yield {j: draw_info.YELLOW, j + 1: draw_info.GREEN}
@@ -186,6 +189,7 @@ def cocktail_sort(draw_info, ascending=True):
 
 def merge_sort(draw_info, ascending=True):
     values = draw_info.list
+    # The recursive helper still yields intermediate states, so merge sort animates one merge at a time.
     yield from merge_sort_range(values, 0, len(values) - 1, ascending, draw_info)
 
 
@@ -248,6 +252,7 @@ def quick_sort_range(values, low, high, ascending, draw_info):
 
 
 def partition(values, low, high, ascending, draw_info):
+    # Quick sort keeps everything before "border" on the correct side of the pivot.
     pivot = values[high]
     border = low
 
@@ -297,6 +302,7 @@ def main():
 
         if sorting and sorting_algorithm_generator is not None:
             try:
+                # Advance the generator one step per frame so the algorithm stays animated instead of finishing instantly.
                 highlights = next(sorting_algorithm_generator)
             except StopIteration:
                 sorting = False
@@ -325,6 +331,7 @@ def main():
                     sorting = False
                 else:
                     if sorting_algorithm_generator is None:
+                        # Build a fresh generator whenever we start or restart a sort.
                         sorting_algorithm_generator = sorting_algorithm(draw_info, ascending)
                     sorting = True
             elif event.key == pygame.K_a and not sorting:
