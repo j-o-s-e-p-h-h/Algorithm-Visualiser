@@ -1,5 +1,6 @@
 import pygame
 import random 
+import math
 
 pygame.init()
 
@@ -35,21 +36,21 @@ class DrawInformation:
 
         #calculating size of each block based off of total num of blocks
         self.block_width = round((self.width - self.side_pad) / len(list))
-        self.block_height = round((self.height - self.top_pad) / (self.max_value - self.min_value))
+        self.block_height = math.floor((self.height - self.top_pad) / (self.max_value - self.min_value))
         
         #where to start drawing blocks
         self.start_x_coordinate = self.side_pad // 2
 
-def draw(draw_info):
+def draw(draw_info, algorithim_name, ascending):
     draw_info.window.fill(draw_info.BACKGROUND_COLOR)
 
-    controls = draw_info.FONT.render("R - Reset | SPACE - Start Sorting", 1, draw_info.BLACK) 
+    controls = draw_info.FONT.render("R - Reset | SPACE - Start Sorting | A - Ascending | D - Descending", 1, draw_info.BLACK) 
     
     #displaying and centering the font
     draw_info.window.blit(controls, (draw_info.width/2 - controls.get_width()/2, 5)) 
 
-    direction = draw_info.FONT.render("A - Ascending | D - Descending", 1, draw_info.BLACK)
-    draw_info.window.blit(direction, (draw_info.width/2 - direction.get_width()/2, 40))
+    #direction = draw_info.FONT.render("A - Ascending | D - Descending", 1, draw_info.BLACK)
+    #draw_info.window.blit(direction, (draw_info.width/2 - direction.get_width()/2, 40))
 
     sorting = draw_info.FONT.render("I - Insertion Sort | B - Bubble Sort", 1, draw_info.BLACK) 
     draw_info.window.blit(sorting, (draw_info.width/2 - sorting.get_width()/2, 75))         
@@ -136,7 +137,7 @@ def main():
         else:
             draw(draw_info)
 
-        draw(draw_info) 
+        draw(draw_info, sorting_algorithm_name, ascending) 
 
     
         for event in pygame.event.get():
