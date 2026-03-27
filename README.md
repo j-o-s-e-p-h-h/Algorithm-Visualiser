@@ -1,6 +1,6 @@
 # Algorithm Visualiser
 
-A simple Pygame sorting visualizer with animated bars and multiple classic algorithms.
+A program to  help visualise algorithms inspired by youtube shorts algorithim vidoes.
 
 Run it with:
 
