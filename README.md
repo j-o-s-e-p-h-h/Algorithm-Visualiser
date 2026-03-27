@@ -1,2 +1,2 @@
 # Algorithm Visualiser
-A program to help a visualize algorithms inspired by those youtube short algorithm visualisers
+A program to help a visualize algorithms inspired by your average youtube short algorithm visualisers
