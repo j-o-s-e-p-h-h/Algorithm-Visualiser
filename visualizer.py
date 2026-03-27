@@ -51,7 +51,7 @@ def draw_list(draw_info):
 
         color = draw_info.GRADIENTS[i % 3]
 
-        pygame.draw.rect(draw_info.window, color, (x, y, draw_info.block_width, draw_info.block_height))
+        pygame.draw.rect(draw_info.window, color, (x, y, draw_info.block_width, draw_info.height))
 
 
 def generate_starting_list(n, min_value, max_value):
