@@ -1,10 +1,16 @@
 # Algorithm Visualiser
 
-A program to help visualise sorting algorithmsinspired by youtube short sorting algorithims.
+A program to help visualise sorting algorithms inspired by YouTube short sorting algorithm videos.
 
 ## Preview
 
 ![Sorting Algorithm Visualizer Preview](assets/sorting-visualizer-preview.png)
+
+## Demo Video
+
+[![Watch the sorting visualizer demo](assets/sorting-visualizer-preview.png)](assets/sorting-visualizer-demo.mp4)
+
+[Open the demo video](assets/sorting-visualizer-demo.mp4)
 
 ## Run
 
