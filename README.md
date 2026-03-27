@@ -1,6 +1,6 @@
 # Algorithm Visualiser
 
-A polished Pygame sorting visualizer with animated bars, live controls, and multiple classic algorithms.
+A simple Pygame sorting visualizer with animated bars and multiple classic algorithms.
 
 Run it with:
 
@@ -19,5 +19,3 @@ Controls:
 - `C`: Cocktail Sort
 - `M`: Merge Sort
 - `Q`: Quick Sort
-- `UP` / `DOWN`: change the number of bars
-- `LEFT` / `RIGHT`: change the animation speed
