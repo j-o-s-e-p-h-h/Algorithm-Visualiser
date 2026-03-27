@@ -8,9 +8,15 @@ A program to help visualise sorting algorithms inspired by YouTube short sorting
 
 ## Demo
 
-[Open the playable demo page](demo.html)
+[Open the live demo page](https://j-o-s-e-p-h-h.github.io/Algorithm-Visualiser/)
 
-[![Watch the sorting visualizer demo](assets/sorting-visualizer-preview.png)](demo.html)
+[![Watch the sorting visualizer demo](assets/sorting-visualizer-preview.png)](https://j-o-s-e-p-h-h.github.io/Algorithm-Visualiser/)
+
+The Pages site is configured to publish this project at:
+
+```text
+https://j-o-s-e-p-h-h.github.io/Algorithm-Visualiser/
+```
 
 ## Run
 
