@@ -10,6 +10,9 @@ class DrawInformation:
     GREEN = 0, 255, 0
     RED = 255, 255, 0
     BACKGROUND_COLOR = WHITE
+    GRADIENTS = [(128, 128, 128),
+                 (160, 160, 160),
+                 (192, 192,192)]
 
     #explain later
     side_pad = 100 
@@ -36,7 +39,20 @@ class DrawInformation:
 
 def draw(draw_info):
     draw_info.window.fill(draw_info.BACKGROUND_COLOR)
+    draw_list(draw_info)
     pygame.display.update()
+
+def draw_list(draw_info):
+    list = draw_info.list
+
+    for i, value in enumerate(list):
+        x = draw_info.start_x_coordinate + i * draw_info.block_width
+        y = draw_info.height - (value - draw_info.min_value) * draw_info.block_height
+
+        color = draw_info.GRADIENTS[i % 3]
+
+        pygame.draw.rect(draw_info.window, color, (x, y, draw_info.block_width, draw_info.block_height))
+
 
 def generate_starting_list(n, min_value, max_value):
     list = []
