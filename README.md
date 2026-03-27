@@ -24,4 +24,3 @@ python visualizer.py
 - `C`: Cocktail Sort
 - `M`: Merge Sort
 - `Q`: Quick Sort
-- large `comicsans` headings and controls
