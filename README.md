@@ -1,10 +1,10 @@
 # Algorithm Visualiser
 
-<<<<<<< HEAD
 A simple Pygame sorting visualizer with a clean white background, gray bars, and multiple classic sorting algorithms.
-=======
-A program to  help visualise algorithms inspired by youtube shorts algorithim vidoes.
->>>>>>> c840cac541f44f57fa6881d0ce995d19f6889ef9
+
+## Preview
+
+![Sorting Algorithm Visualizer Preview](assets/sorting-visualizer-preview.png)
 
 ## Run
 
