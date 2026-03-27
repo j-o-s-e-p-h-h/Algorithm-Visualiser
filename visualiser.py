@@ -41,31 +41,27 @@ def generate_starting_list(n, min_value, max_value):
         list.append(value)
 
     return list
-
-
 def main():
     run = True 
     #clock to regulate how quickly loop can run for
     clock = pygame.time.Clock()
 
+    n = 50 
+    min_value = 0 
+    max_value = 100
+    list = generate_starting_list(n, min_value, max_value)
+    draw_info = DrawInformation(800, 600, list)
+
     while run:
         clock.tick(120)
-
-        n = 50 
-        min_value = 0 
-        max_value = 100
-
-
-        list = generate_starting_list(n ,min_value, max_value)
-        draw_info = DrawInformation(800, 600, list)
-
-        pygame.display.update()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-        
-        pygame.quit()
+
+        pygame.display.update()
+
+    pygame.quit()
 
 if __name__ == "__main__":
     main()
