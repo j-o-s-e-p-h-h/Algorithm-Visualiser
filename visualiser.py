@@ -17,7 +17,7 @@ class DrawInformation:
     def __init__(self, width, height, list):
         self.width = width 
         self.height = height 
-        self.window = pygame.set_mode((width, height))
+        self.window = pygame.display.set_mode((width, height))
         pygame.display.set_caption("Sorting Algoithm Visualizer")
         self.set_list(list)
 
@@ -49,7 +49,15 @@ def main():
     clock = pygame.time.Clock()
 
     while run:
-        clock.tick(60)
+        clock.tick(120)
+
+        n = 50 
+        min_value = 0 
+        max_value = 100
+
+
+        list = generate_starting_list(n ,min_value, max_value)
+        draw_info = DrawInformation(800, 600, list)
 
         pygame.display.update()
 
