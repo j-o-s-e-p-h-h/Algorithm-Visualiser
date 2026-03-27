@@ -1,6 +1,6 @@
 # Algorithm Visualiser
 
-A simple Pygame sorting visualizer with a clean white background, gray bars, and multiple classic sorting algorithms.
+A program to help visualise sorting algorithmsinspired by youtube short sorting algorithims.
 
 ## Preview
 
@@ -25,12 +25,6 @@ M - Merge | Q - Quick
 Bubble Sort | Ascending | Ready
 ```
 
-The status line updates while the program is running to show:
-
-- the currently selected algorithm
-- whether the sort is ascending or descending
-- whether the app is ready or actively sorting
-
 ## Controls
 
 - `R`: reset the list
@@ -43,10 +37,4 @@ The status line updates while the program is running to show:
 - `C`: Cocktail Sort
 - `M`: Merge Sort
 - `Q`: Quick Sort
-
-## Visual Style
-
-- white background
-- grayscale bars
-- highlighted bars during comparisons and swaps
 - large `comicsans` headings and controls
