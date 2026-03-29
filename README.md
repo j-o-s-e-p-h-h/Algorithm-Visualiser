@@ -4,7 +4,10 @@ A program to help visualise sorting algorithms inspired by YouTube short sorting
 
 ## Preview
 
-![Sorting Algorithm Visualizer Preview](assets/sorting-visualizer-preview.png)
+
+https://github.com/user-attachments/assets/7f6653aa-a4e8-401e-8dc6-9c967fe085c5
+
+
 
 ## Run
 
